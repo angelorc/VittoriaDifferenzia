@@ -1,29 +1,25 @@
 const Scene = require("telegraf/scenes/base");
 const Markup = require("telegraf/markup");
+const Extra = require("telegraf/extra");
 const calendar = require("../lib/calendar");
 const showCalendar = new Scene("show_calendar");
 
-showCalendar.enter(async ctx => {
+showCalendar.enter(ctx => {
   try {
 
     const textCalendar = calendar.map((data) => {
       return `${data.day_of_the_week} - ${data.waste_to_expose}\n`
     }).join("")
 
-    console.log(textCalendar)
-
     const text =
       `🗓 *Calendario Settimanale*\n\n${textCalendar}`;
 
-    ctx.replyWithMarkdown(text, Markup.inlineKeyboard([
-      [
-        Markup.callbackButton("Cosa butto oggi?", "today_calendar")
-      ],
-      [Markup.callbackButton("Mostrami il calendario", "show_calendar")],
-      [
-        Markup.callbackButton("Info", "info"),
-      ]
-    ]));
+    ctx.replyWithMarkdown(text, Extra.markdown().markup(
+      Markup.inlineKeyboard(
+        [Markup.callbackButton("Cosa butto oggi?", "today_calendar"), Markup.callbackButton("Mostrami il calendario", "show_calendar")], {
+          columns: 1
+        }
+      )));
   } catch (err) {
     console.error(err);
   }

@@ -9,6 +9,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const showCalendar = require("./scenes/show_calendar");
+const todayCalendar = require("./scenes/today_calendar");
 
 const mongo_uri = `mongodb://localhost:27017/${process.env.MONGODB_NAME}?replicaSet=replica01`;
 
@@ -31,7 +32,7 @@ const initScene = require("./scenes/init");
 mongoose.connection.on("open", async () => {
   const bot = new Telegraf(process.env.BOT_TOKEN);
 
-  const stage = new Stage([initScene, showCalendar]);
+  const stage = new Stage([initScene, todayCalendar, showCalendar]);
 
   TelegrafMongoSession.setup(bot, mongo_uri);
 

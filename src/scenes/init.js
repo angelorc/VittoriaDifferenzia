@@ -29,10 +29,10 @@ initScene.enter(async ctx => {
   }
 
   if (user) {
-    return await ctx.scene.enter("show_calendar");
+    return ctx.scene.enter("show_calendar");
   }
 
-  await ctx.replyWithMarkdown(
+  ctx.replyWithMarkdown(
     "Benvenuto su *VittoriaDifferenzia*.\nSono un semplice bot che ti ricorderà il *rifiuto da esporre oggi*.\n\n_Questo bot è open source ed dedicato alla città di Vittoria._",
     mainKeyboard
   );
@@ -40,11 +40,11 @@ initScene.enter(async ctx => {
 
 initScene.action(
   "today_calendar",
-  async ctx => await ctx.scene.enter("today_calendar")
+  ctx => ctx.scene.enter("today_calendar")
 );
 initScene.action(
   "show_calendar",
-  async ctx => await ctx.scene.enter("show_calendar")
+  ctx => ctx.scene.enter("show_calendar")
 );
 
 module.exports = initScene;
