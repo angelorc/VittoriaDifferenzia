@@ -31,7 +31,7 @@ const calendar = [{
   {
     index: 0,
     day_of_the_week: 'Domenica',
-    waste_to_expose: ''
+    waste_to_expose: 'Giorno di riposo'
   }
 ];
 
