@@ -2,7 +2,9 @@ const Markup = require("telegraf/markup");
 const Stage = require("telegraf/stage");
 const Scene = require("telegraf/scenes/base");
 
-const { enter } = Stage;
+const {
+  enter
+} = Stage;
 const User = require("../models/user");
 
 const mainKeyboard = Markup.inlineKeyboard([
@@ -27,7 +29,7 @@ initScene.enter(async ctx => {
   }
 
   if (user) {
-    return await ctx.scene.enter("main");
+    return await ctx.scene.enter("show_calendar");
   }
 
   await ctx.replyWithMarkdown(
