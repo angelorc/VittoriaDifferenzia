@@ -7,7 +7,7 @@ const todayCalendar = new Scene("today_calendar");
 todayCalendar.enter(ctx => {
   try {
 
-    const dayOfTheWeek = new Date().getDay();
+    const dayOfTheWeek = new Date().getDay() + 1;
     const wasteToExpose = calendar.find(c => c.index === dayOfTheWeek)
 
     const text =
