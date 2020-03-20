@@ -7,13 +7,14 @@ const todayCalendar = new Scene("today_calendar");
 todayCalendar.enter(ctx => {
   try {
 
-    const dayOfTheWeek = new Date().getDay() + 1;
-    const wasteToExpose = calendar.find(c => c.index === dayOfTheWeek)
+    const dayOfTheWeek = new Date().getDay();
+    const wasteToExposeA = calendar.find(c => c.index === dayOfTheWeek)
+    const wasteToExposeB = calendar.find(c => c.index === dayOfTheWeek + 1)
 
     const text =
       `*Cosa esporre oggi?*\n\n` +
-      `Oggi è *${wasteToExpose.day_of_the_week}*\n` +
-      `Devi esporre: *${wasteToExpose.waste_to_expose}*\n` +
+      `Oggi è *${wasteToExposeA.day_of_the_week}*\n` +
+      `Devi esporre: *${wasteToExposeB.waste_to_expose}*\n` +
       `Orario di esposizione: *20:00 - 24:00*`;
 
     ctx.replyWithMarkdown(text, Extra.markdown().markup(
