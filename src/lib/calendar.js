@@ -28,6 +28,11 @@ const calendar = [{
     day_of_the_week: 'Sabato',
     waste_to_expose: 'Indifferenziato'
   },
+  {
+    index: 0,
+    day_of_the_week: 'Domenica',
+    waste_to_expose: ''
+  }
 ];
 
 module.exports = calendar

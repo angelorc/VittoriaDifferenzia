@@ -9,13 +9,20 @@ todayCalendar.enter(ctx => {
 
     const dayOfTheWeek = new Date().getDay();
     const wasteToExposeA = calendar.find(c => c.index === dayOfTheWeek)
-    const wasteToExposeB = calendar.find(c => c.index === dayOfTheWeek + 1)
+    const wasteToExposeB = calendar.find(c => c.index === (dayOfTheWeek + 1 === 7 ? 0 : dayOfTheWeek + 1))
 
-    const text =
-      `*Cosa esporre oggi?*\n\n` +
-      `Oggi è *${wasteToExposeA.day_of_the_week}*\n` +
-      `Devi esporre: *${wasteToExposeB.waste_to_expose}*\n` +
-      `Orario di esposizione: *20:00 - 24:00*`;
+    let text = ``
+
+    if (wasteToExposeB.index === 0) {
+      text = `*Cosa esporre oggi?*\n\n` +
+        `Oggi è *Sabato*\nI nostri operatori ecologici il sabato non raccolgono i rifiuti per la domenica. Anche loro hanno diritto ad una pausa!\n`
+    } else {
+      text =
+        `*Cosa esporre oggi?*\n\n` +
+        `Oggi è *${wasteToExposeA.day_of_the_week}*\n` +
+        `Devi esporre: *${wasteToExposeB.waste_to_expose}*\n` +
+        `Orario di esposizione: *20:00 - 24:00*`;
+    }
 
     ctx.replyWithMarkdown(text, Extra.markdown().markup(
       Markup.inlineKeyboard(
