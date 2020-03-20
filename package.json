@@ -1,0 +1,17 @@
+{
+  "name": "vittoriadifferenzia",
+  "version": "0.1.0",
+  "description": "Calendario differenziata della città di Vittoria, invia reminder su telegram",
+  "main": "src/bot.js",
+  "scripts": {
+    "start": "node src/bot.js"
+  },
+  "author": "Angelo Recca",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "mongoose": "^5.9.5",
+    "telegraf": "^3.36.0",
+    "telegraf-session-mongodb": "^1.2.1"
+  }
+}
