@@ -34,7 +34,7 @@ initScene.enter(async ctx => {
   }
 
   ctx.replyWithMarkdown(
-    "Benvenuto su *VittoriaDifferenzia*.\nSono un semplice bot che ti ricorderà il *rifiuto da esporre oggi*.\n\n_Questo bot è open source ed dedicato alla città di Vittoria._",
+    "Benvenuto su *VittoriaDifferenzia*.\nSono un semplice bot che ti ricorderà il *rifiuto da esporre oggi*.\n\n_Questo bot è open source ed è dedicato alla città di Vittoria._",
     mainKeyboard
   );
 });
