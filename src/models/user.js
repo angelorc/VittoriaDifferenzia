@@ -7,9 +7,8 @@ var UserSchema = new mongoose.Schema({
     unique: true
   },
   username: String,
-  name: String,
-  address: String,
-  wallet: String
-});
+  first_name: String,
+  last_name: String,
+}, { timestamps: true });
 
 module.exports = mongoose.model("User", UserSchema);

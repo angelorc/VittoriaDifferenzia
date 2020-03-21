@@ -22,7 +22,8 @@ initScene.enter(async ctx => {
     const newUser = new User({
       chat_id: ctx.from.id,
       username: ctx.from.username ? ctx.from.username : '',
-      name: ctx.from.first_name + " " + ctx.from.last_name
+      first_name: ctx.from.first_name ? ctx.from.first_name : '',
+      last_name: ctx.from.last_name ? ctx.from.last_name : '',
     });
 
     await newUser.save();
