@@ -14,7 +14,7 @@ showCalendar.enter(ctx => {
     const lastUpdateAt = `_Ultimo aggiornamento: 20/04/2020_`
 
     const text =
-      `🗓 *Calendario Settimanale*\n\n${textCalendar}\n\n${lastUpdateAt}`;
+      `🗓 *Calendario Settimanale*\n\n${textCalendar}\n${lastUpdateAt}`;
 
     ctx.replyWithMarkdown(text, Extra.markdown().markup(
       Markup.inlineKeyboard(
