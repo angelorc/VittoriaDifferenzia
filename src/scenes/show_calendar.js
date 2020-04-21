@@ -11,14 +11,16 @@ showCalendar.enter(ctx => {
       return `${data.day_of_the_week} - ${data.waste_to_expose}\n`
     }).join("")
 
+    const lastUpdateAt = `_Ultimo aggiornamento: 20/04/2020_`
+
     const text =
-      `🗓 *Calendario Settimanale*\n\n${textCalendar}`;
+      `🗓 *Calendario Settimanale*\n\n${textCalendar}\n\n${lastUpdateAt}`;
 
     ctx.replyWithMarkdown(text, Extra.markdown().markup(
       Markup.inlineKeyboard(
         [Markup.callbackButton("Cosa butto oggi?", "today_calendar"), Markup.callbackButton("Mostrami il calendario", "show_calendar")], {
-          columns: 1
-        }
+        columns: 1
+      }
       )));
   } catch (err) {
     console.error(err);
