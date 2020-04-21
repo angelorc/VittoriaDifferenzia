@@ -1,17 +1,20 @@
 const Scene = require("telegraf/scenes/base");
 const Markup = require("telegraf/markup");
 const Extra = require("telegraf/extra");
-const calendar = require("../lib/calendar");
 const showCalendar = new Scene("show_calendar");
+
+const { getWeekCalendar } = require("../lib/utils")
+const moment = require("moment")
+
 
 showCalendar.enter(ctx => {
   try {
 
-    const textCalendar = calendar.map((data) => {
-      return `${data.day_of_the_week} - ${data.waste_to_expose}\n`
+    const textCalendar = getWeekCalendar().map((data) => {
+      return `${moment(new Date(data.date)).format('DD/MM')} - ${data.waste_to_expose}\n`
     }).join("")
 
-    const lastUpdateAt = `_Ultimo aggiornamento: 20/04/2020_`
+    const lastUpdateAt = `_Ultimo aggiornamento: 21/04/2020_`
 
     const text =
       `🗓 *Calendario Settimanale*\n\n${textCalendar}\n${lastUpdateAt}`;

@@ -5,7 +5,8 @@ dotenv.config();
 
 const Markup = require("telegraf/markup");
 const Extra = require("telegraf/extra");
-const calendar = require("./lib/calendar");
+const { getTodayCalendar } = require("./lib/utils")
+const moment = require("moment")
 
 const User = require("./models/user");
 const mongo_uri = `mongodb://localhost:27017/${process.env.MONGODB_NAME}?replicaSet=replica01`;
@@ -30,15 +31,17 @@ mongoose.connection.on("open", async () => {
     const users = await User.find({});
     const totalUsers = users.length;
 
-    const dayOfTheWeek = new Date().getDay();
-    const wasteToExposeA = calendar.find(c => c.index === dayOfTheWeek)
-    const wasteToExposeB = calendar.find(c => c.index === (dayOfTheWeek + 1 === 7 ? 0 : dayOfTheWeek + 1))
+    const calendar = getTodayCalendar()
 
-    if (wasteToExposeB.index !== 0) {
+    if (calendar.waste_to_expose !== '') {
+      moment.locale('it')
+
+      let dayOfTheWeek = moment(new Date(calendar.date)).subtract(1, 'days').format('dddd')
+      dayOfTheWeek = `${dayOfTheWeek.charAt(0).toUpperCase()}${dayOfTheWeek.slice(1)}`
       const text =
         `*Cosa esporre oggi?*\n\n` +
-        `Oggi è *${wasteToExposeA.day_of_the_week}*\n` +
-        `Devi esporre: *${wasteToExposeB.waste_to_expose}*\n` +
+        `Oggi è *${dayOfTheWeek}*\n` +
+        `Devi esporre: *${calendar.waste_to_expose}*\n` +
         `Orario di esposizione: *20:00 - 24:00*`;
 
       let count = 0
@@ -48,8 +51,8 @@ mongoose.connection.on("open", async () => {
           await bot.telegram.sendMessage(user.chat_id, text, Extra.markdown().markup(
             Markup.inlineKeyboard(
               [Markup.callbackButton("Cosa butto oggi?", "today_calendar"), Markup.callbackButton("Mostrami il calendario", "show_calendar")], {
-                columns: 1
-              }
+              columns: 1
+            }
             )))
 
           count++
