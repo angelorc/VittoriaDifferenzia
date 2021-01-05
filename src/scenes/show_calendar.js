@@ -14,7 +14,7 @@ showCalendar.enter(ctx => {
       return `${moment(new Date(data.date)).format('DD/MM')} - ${data.waste_to_expose}\n`
     }).join("")
 
-    const lastUpdateAt = `_Ultimo aggiornamento: 03/06/2020_`
+    const lastUpdateAt = `_Ultimo aggiornamento: 05/01/2021_`
 
     const text =
       `🗓 *Calendario Settimanale*\n\n${textCalendar}\n${lastUpdateAt}`;
