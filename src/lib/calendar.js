@@ -1,115 +1,11 @@
 const calendar = [
   {
-    date: "2021-01-6",
-    waste_to_expose: "Carta e Cartone",
-  },
-  {
-    date: "2021-01-7",
-    waste_to_expose: "Umido e Pannolini",
-  },
-  {
-    date: "2021-01-8",
-    waste_to_expose: "Plastica, Metalli e Pannolini",
-  },
-  {
-    date: "2021-01-9",
-    waste_to_expose: "Indifferenziato e Pannolini",
-  },
-  {
-    date: "2021-01-10",
-    waste_to_expose: "",
-  },
-  {
-    date: "2021-01-11",
-    waste_to_expose: "Umido e Pannolini",
-  },
-  {
-    date: "2021-01-12",
-    waste_to_expose: "Indifferenziato e Pannolini",
-  },
-  {
-    date: "2021-01-13",
-    waste_to_expose: "Vetro",
-  },
-  {
-    date: "2021-01-14",
-    waste_to_expose: "Umido e Pannolini",
-  },
-  {
-    date: "2021-01-15",
-    waste_to_expose: "Plastica, Metalli e Pannolini",
-  },
-  {
-    date: "2021-01-16",
-    waste_to_expose: "Indifferenziato e Pannolini",
-  },
-  {
-    date: "2021-01-17",
-    waste_to_expose: "",
-  },
-  {
-    date: "2021-01-18",
-    waste_to_expose: "Umido e pannolini",
-  },
-  {
-    date: "2021-01-19",
-    waste_to_expose: "Indifferenziato e Pannolini",
-  },
-  {
-    date: "2021-01-20",
-    waste_to_expose: "Carta e Cartone",
-  },
-  {
-    date: "2021-01-21",
-    waste_to_expose: "Umido e Pannolini",
-  },
-  {
-    date: "2021-01-22",
-    waste_to_expose: "Plastica, Metalli e Pannolini",
-  },
-  {
-    date: "2021-01-23",
-    waste_to_expose: "Indifferenziato e Pannolini",
-  },
-  {
-    date: "2021-01-24",
-    waste_to_expose: "",
-  },
-  {
-    date: "2021-01-25",
-    waste_to_expose: "Umido e Pannolini",
-  },
-  {
-    date: "2021-01-26",
-    waste_to_expose: "Indifferenziato e Pannolini",
-  },
-  {
-    date: "2021-01-27",
-    waste_to_expose: "Vetro",
-  },
-  {
-    date: "2021-01-28",
-    waste_to_expose: "Umido e Pannolini",
-  },
-  {
-    date: "2021-01-29",
-    waste_to_expose: "Plastica, Metalli e Pannolini",
-  },
-  {
-    date: "2021-01-30",
-    waste_to_expose: "Indifferenziato e Pannolini",
-  },
-  {
-    date: "2021-01-31",
-    waste_to_expose: "",
-  },
-  {
     date: "2021-02-1",
     waste_to_expose: "Umido e Pannolini",
   },
   {
     date: "2021-02-2",
-    waste_to_expose: "Indifferenziato e Pannolini",
+    waste_to_expose: "RACCOLTA SOSPESA!!!",
   },
   {
     date: "2021-02-3",
@@ -125,7 +21,7 @@ const calendar = [
   },
   {
     date: "2021-02-6",
-    waste_to_expose: "Indifferenziato e Pannolini",
+    waste_to_expose: "Vetro",
   },
   {
     date: "2021-02-7",
