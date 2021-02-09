@@ -37,7 +37,7 @@ const calendar = [
   },
   {
     date: "2021-02-10",
-    waste_to_expose: "Carta e Cartone",
+    waste_to_expose: "Carta e Cartone (ERRATA CORRIGE)",
   },
   {
     date: "2021-02-11",
