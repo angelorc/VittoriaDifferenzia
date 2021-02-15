@@ -50,6 +50,38 @@ const calendar = [
   {
     date: "2021-02-13",
     waste_to_expose: "Vetro",
+  },
+  {
+    date: "2021-02-14",
+    waste_to_expose: "",
+  },
+  {
+    date: "2021-02-15",
+    waste_to_expose: "Umido e Pannolini",
+  },
+  {
+    date: "2021-02-16",
+    waste_to_expose: "Indifferenziato e Pannolini",
+  },
+  {
+    date: "2021-02-17",
+    waste_to_expose: "Carta e Cartone",
+  },
+  {
+    date: "2021-02-18",
+    waste_to_expose: "Umido e Pannolini",
+  },
+  {
+    date: "2021-02-19",
+    waste_to_expose: "Plastica, Metalli e Pannolini",
+  },
+  {
+    date: "2021-02-20",
+    waste_to_expose: "Vetro",
+  },
+  {
+    date: "2021-02-21",
+    waste_to_expose: "",
   }
 ];
 
