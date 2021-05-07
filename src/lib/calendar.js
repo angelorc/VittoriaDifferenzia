@@ -362,6 +362,146 @@ const calendar = [
   {
     date: "2021-05-02",
     waste_to_expose: "",
+  },
+  {
+    date: "2021-05-03",
+    waste_to_expose: "Umido e Pannolini",
+  },
+  {
+    date: "2021-05-04",
+    waste_to_expose: "Indifferenziato e Pannolini",
+  },
+  {
+    date: "2021-05-05",
+    waste_to_expose: "Carta e Cartone",
+  },
+  {
+    date: "2021-05-06",
+    waste_to_expose: "Umido e Pannolini",
+  },
+  {
+    date: "2021-05-07",
+    waste_to_expose: "Plastica, Metalli e Pannolini",
+  },
+  {
+    date: "2021-05-08",
+    waste_to_expose: "Vetro",
+  },
+  {
+    date: "2021-05-09",
+    waste_to_expose: "",
+  },
+  {
+    date: "2021-05-10",
+    waste_to_expose: "Umido e Pannolini",
+  },
+  {
+    date: "2021-05-11",
+    waste_to_expose: "Indifferenziato e Pannolini",
+  },
+  {
+    date: "2021-05-12",
+    waste_to_expose: "Carta e Cartone",
+  },
+  {
+    date: "2021-05-13",
+    waste_to_expose: "Umido e Pannolini",
+  },
+  {
+    date: "2021-05-14",
+    waste_to_expose: "Plastica, Metalli e Pannolini",
+  },
+  {
+    date: "2021-05-15",
+    waste_to_expose: "Vetro",
+  },
+  {
+    date: "2021-05-16",
+    waste_to_expose: "",
+  },
+  {
+    date: "2021-05-17",
+    waste_to_expose: "Umido e Pannolini",
+  },
+  {
+    date: "2021-05-18",
+    waste_to_expose: "Indifferenziato e Pannolini",
+  },
+  {
+    date: "2021-05-19",
+    waste_to_expose: "Carta e Cartone",
+  },
+  {
+    date: "2021-05-20",
+    waste_to_expose: "Umido e Pannolini",
+  },
+  {
+    date: "2021-05-21",
+    waste_to_expose: "Plastica, Metalli e Pannolini",
+  },
+  {
+    date: "2021-05-22",
+    waste_to_expose: "Vetro",
+  },
+  {
+    date: "2021-05-23",
+    waste_to_expose: "",
+  },
+  {
+    date: "2021-05-24",
+    waste_to_expose: "Umido e Pannolini",
+  },
+  {
+    date: "2021-05-25",
+    waste_to_expose: "Indifferenziato e Pannolini",
+  },
+  {
+    date: "2021-05-26",
+    waste_to_expose: "Carta e Cartone",
+  },
+  {
+    date: "2021-05-27",
+    waste_to_expose: "Umido e Pannolini",
+  },
+  {
+    date: "2021-05-28",
+    waste_to_expose: "Plastica, Metalli e Pannolini",
+  },
+  {
+    date: "2021-05-29",
+    waste_to_expose: "Vetro",
+  },
+  {
+    date: "2021-05-30",
+    waste_to_expose: "",
+  },
+  {
+    date: "2021-05-31",
+    waste_to_expose: "Umido e Pannolini",
+  },
+  {
+    date: "2021-06-01",
+    waste_to_expose: "Indifferenziato e Pannolini",
+  },
+  {
+    date: "2021-06-02",
+    waste_to_expose: "Carta e Cartone",
+  },
+  {
+    date: "2021-06-03",
+    waste_to_expose: "Umido e Pannolini",
+  },
+  {
+    date: "2021-06-04",
+    waste_to_expose: "Plastica, Metalli e Pannolini",
+  },
+  {
+    date: "2021-06-05",
+    waste_to_expose: "Vetro",
+  },
+  {
+    date: "2021-06-06",
+    waste_to_expose: "",
   }
 ];
 
